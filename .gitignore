@@ -1,0 +1,39 @@
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output (Tailwind CLI or bundlers)
+dist/
+build/
+public/
+
+# Tailwind JIT cache
+.tailwindcache/
+*.tmp
+*.temp
+
+# VS Code Live Server config (optional but useful)
+.vscode/
+*.code-workspace
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# Prettier or ESLint cache
+.prettiercache/
+.eslintcache
+
+# Env files (if you add any later)
+.env
+.env.*
+
+# Other common caches
+.cache/
+tmp/
