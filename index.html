@@ -1,205 +1,115 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="./src/style.css">
-  </head>
-  <body>
-dddddd
-<div class="dropdown relative inline-flex">
-  <button id="dropdown-default" type="button" class="dropdown-toggle btn btn-primary" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-    Dropdown
-    <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-default">
-    <li><a class="dropdown-item" href="#">My Profile</a></li>
-    <li><a class="dropdown-item" href="#">Settings</a></li>
-    <li><a class="dropdown-item" href="#">Billing</a></li>
-    <li><a class="dropdown-item" href="#">FAQs</a></li>
-  </ul>
-</div>
-<div class="dropdown relative inline-flex">
-  <button id="dropdown-header" type="button" class="dropdown-toggle btn btn-primary" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-    Dropdown header
-    <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
-  </button>
-  <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-header">
-    <li class="dropdown-header gap-2">
-      <div class="avatar">
-        <div class="w-10 rounded-full">
-          <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png" alt="User Avatar" />
-        </div>
-      </div>
-      <div>
-        <h6 class="text-base-content text-base font-semibold">John Doe</h6>
-        <small class="text-base-content/50 text-sm font-normal">jhon@doe.com</small>
-      </div>
-    </li>
-    <li><a class="dropdown-item" href="#">My Profile</a></li>
-    <li><a class="dropdown-item" href="#">Settings</a></li>
-    <li><a class="dropdown-item" href="#">Billing</a></li>
-    <li><a class="dropdown-item" href="#">FAQs</a></li>
-  </ul>
-</div>
-<button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="basic-modal" data-overlay="#basic-modal" > Open modal </button>
+<html lang="ar" dir="rtl" data-theme="light">
 
-<div id="basic-modal" class="overlay modal overlay-open:opacity-100 hidden overlay-open:duration-300" role="dialog" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Dialog Title</h3>
-        <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close" data-overlay="#basic-modal" >
-          <span class="icon-[tabler--x] size-4"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-        This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text in the
-        modal, we use an inline style to set a minimum height, thereby extending the length of the overall modal and
-        demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling
-        will move the modal as needed.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-soft btn-secondary" data-overlay="#basic-modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div><div class="accordion divide-neutral/20 divide-y">
-  <div class="accordion-item active" id="payment-basic">
-    <button class="accordion-toggle inline-flex items-center gap-x-4 text-start" aria-controls="payment-basic-collapse" aria-expanded="true" >
-      <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
-      <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
-      When is payment taken for my order?
-    </button>
-    <div id="payment-basic-collapse" class="accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="payment-basic" role="region" >
-      <div class="px-5 pb-4">
-        <p class="text-base-content/80 font-normal">
-          Payment is taken during the checkout process when you pay for your order. The order number that appears on the
-          confirmation screen indicates payment has been successfully processed.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item" id="delivery-basic">
-    <button class="accordion-toggle inline-flex items-center gap-x-4 text-start" aria-controls="delivery-basic-collapse" aria-expanded="false" >
-      <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
-      <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
-      How would you ship my order?
-    </button>
-    <div id="delivery-basic-collapse" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="delivery-basic" role="region" >
-      <div class="px-5 pb-4">
-        <p class="text-base-content/80 font-normal">
-          For large products, we deliver your product via a third party logistics company offering you the “room of
-          choice” scheduled delivery service. For small products, we offer free parcel delivery.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item" id="cancel-basic">
-    <button class="accordion-toggle inline-flex items-center gap-x-4 text-start" aria-controls="cancel-basic-collapse" aria-expanded="false" >
-      <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
-      <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
-      Can I cancel my order?
-    </button>
-    <div id="cancel-basic-collapse" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="cancel-basic" role="region" >
-      <div class="px-5 pb-4">
-        <p class="text-base-content/80 font-normal">
-          Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Slider -->
-<div
-  data-carousel='{
-    "loadingClasses": "opacity-0",
-    "dotsItemClasses": "carousel-box carousel-active:bg-primary"
-  }' class="relative w-full" >
-  <div class="carousel h-80">
-    <div class="carousel-body h-full opacity-0">
-      <div class="carousel-slide">
-        <div class="bg-base-200/60 flex h-full justify-center p-6">
-          <span class="self-center text-2xl sm:text-4xl">First slide</span>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <!-- Gourmet : 'Rubik' -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <p>+966536465255</p>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.58302 0.364038C2.82487 0.28852 3.0758 0.25 3.32842 0.25C4.54269 0.25 5.44232 1.31924 5.44231 2.52843V5.24081C5.44231 6.45002 4.54269 7.51922 3.32842 7.51922C3.07579 7.51922 2.82487 7.48075 2.58302 7.40522L2.39814 7.34747C2.33502 7.32775 2.27291 7.30592 2.21188 7.282C3.17508 9.23807 4.76193 10.8249 6.718 11.7881C6.69407 11.7271 6.67225 11.665 6.65252 11.6018L6.59477 11.417C6.51925 11.1751 6.48077 10.9242 6.48077 10.6715C6.48077 9.4573 7.54997 8.55767 8.7592 8.55767H11.4716C12.6807 8.55767 13.75 9.4573 13.75 10.6715C13.75 10.9242 13.7115 11.1751 13.6359 11.417L13.5782 11.6018C13.242 12.6788 12.2801 13.4587 11.1295 13.6615C10.4596 13.7795 9.77117 13.7795 9.10127 13.6615C9.07487 13.6568 9.04862 13.6519 9.02245 13.6466C4.63214 12.8019 1.19803 9.36782 0.353365 4.97747C0.348122 4.95132 0.34318 4.92508 0.338537 4.89873C0.220487 4.22882 0.220487 3.54041 0.338537 2.8705C0.541277 1.71992 1.3212 0.758043 2.39814 0.421765L2.58302 0.364038Z"
+                  fill="black" />
+                <path
+                  d="M2.58302 0.364038C2.82487 0.28852 3.0758 0.25 3.32842 0.25C4.54269 0.25 5.44232 1.31924 5.44231 2.52843V5.24081C5.44231 6.45002 4.54269 7.51922 3.32842 7.51922C3.07579 7.51922 2.82487 7.48075 2.58302 7.40522L2.39814 7.34747C2.33502 7.32775 2.27291 7.30592 2.21188 7.282C3.17508 9.23807 4.76193 10.8249 6.718 11.7881C6.69407 11.7271 6.67225 11.665 6.65252 11.6018L6.59477 11.417C6.51925 11.1751 6.48077 10.9242 6.48077 10.6715C6.48077 9.4573 7.54997 8.55767 8.7592 8.55767H11.4716C12.6807 8.55767 13.75 9.4573 13.75 10.6715C13.75 10.9242 13.7115 11.1751 13.6359 11.417L13.5782 11.6018C13.242 12.6788 12.2801 13.4587 11.1295 13.6615C10.4596 13.7795 9.77117 13.7795 9.10127 13.6615C9.07487 13.6568 9.04862 13.6519 9.02245 13.6466C4.63214 12.8019 1.19803 9.36782 0.353365 4.97747C0.348122 4.95132 0.34318 4.92508 0.338537 4.89873C0.220487 4.22882 0.220487 3.54041 0.338537 2.8705C0.541277 1.71992 1.3212 0.758043 2.39814 0.421765L2.58302 0.364038Z"
+                  fill="black" fill-opacity="0.2" />
+                <path
+                  d="M2.58302 0.364038C2.82487 0.28852 3.0758 0.25 3.32842 0.25C4.54269 0.25 5.44232 1.31924 5.44231 2.52843V5.24081C5.44231 6.45002 4.54269 7.51922 3.32842 7.51922C3.07579 7.51922 2.82487 7.48075 2.58302 7.40522L2.39814 7.34747C2.33502 7.32775 2.27291 7.30592 2.21188 7.282C3.17508 9.23807 4.76193 10.8249 6.718 11.7881C6.69407 11.7271 6.67225 11.665 6.65252 11.6018L6.59477 11.417C6.51925 11.1751 6.48077 10.9242 6.48077 10.6715C6.48077 9.4573 7.54997 8.55767 8.7592 8.55767H11.4716C12.6807 8.55767 13.75 9.4573 13.75 10.6715C13.75 10.9242 13.7115 11.1751 13.6359 11.417L13.5782 11.6018C13.242 12.6788 12.2801 13.4587 11.1295 13.6615C10.4596 13.7795 9.77117 13.7795 9.10127 13.6615C9.07487 13.6568 9.04862 13.6519 9.02245 13.6466C4.63214 12.8019 1.19803 9.36782 0.353365 4.97747C0.348122 4.95132 0.34318 4.92508 0.338537 4.89873C0.220487 4.22882 0.220487 3.54041 0.338537 2.8705C0.541277 1.71992 1.3212 0.758043 2.39814 0.421765L2.58302 0.364038Z"
+                  fill="black" fill-opacity="0.2" />
+                <path
+                  d="M7.83425 1.44349C9.1646 1.06444 10.6132 1.38149 11.6158 2.38403C12.6184 3.38657 12.9354 4.83524 12.5563 6.16554C12.4777 6.44139 12.6376 6.72864 12.9134 6.80724C13.1892 6.88577 13.4764 6.72594 13.555 6.45017C14.0292 4.78596 13.6395 2.93914 12.3501 1.64972C11.0607 0.36031 9.21388 -0.0293893 7.5497 0.444776C7.27385 0.523353 7.11403 0.810625 7.19263 1.08642C7.27115 1.3622 7.55848 1.52207 7.83425 1.44349Z"
+                  fill="black" />
+                <path
+                  d="M7.83425 1.44349C9.1646 1.06444 10.6132 1.38149 11.6158 2.38403C12.6184 3.38657 12.9354 4.83524 12.5563 6.16554C12.4777 6.44139 12.6376 6.72864 12.9134 6.80724C13.1892 6.88577 13.4764 6.72594 13.555 6.45017C14.0292 4.78596 13.6395 2.93914 12.3501 1.64972C11.0607 0.36031 9.21388 -0.0293893 7.5497 0.444776C7.27385 0.523353 7.11403 0.810625 7.19263 1.08642C7.27115 1.3622 7.55848 1.52207 7.83425 1.44349Z"
+                  fill="black" fill-opacity="0.2" />
+                <path
+                  d="M7.83425 1.44349C9.1646 1.06444 10.6132 1.38149 11.6158 2.38403C12.6184 3.38657 12.9354 4.83524 12.5563 6.16554C12.4777 6.44139 12.6376 6.72864 12.9134 6.80724C13.1892 6.88577 13.4764 6.72594 13.555 6.45017C14.0292 4.78596 13.6395 2.93914 12.3501 1.64972C11.0607 0.36031 9.21388 -0.0293893 7.5497 0.444776C7.27385 0.523353 7.11403 0.810625 7.19263 1.08642C7.27115 1.3622 7.55848 1.52207 7.83425 1.44349Z"
+                  fill="black" fill-opacity="0.2" />
+                <path
+                  d="M9.1343 3.33066C9.48463 3.26088 9.9284 3.37854 10.2748 3.72496C10.6213 4.07137 10.7389 4.51514 10.6692 4.8655C10.6132 5.14673 10.7957 5.42013 11.077 5.47615C11.3582 5.53216 11.6316 5.34958 11.6876 5.06835C11.8309 4.34915 11.5795 3.56102 11.0092 2.99065C10.4388 2.42029 9.65068 2.16896 8.93143 2.31221C8.65025 2.36822 8.46763 2.64162 8.52365 2.92286C8.57968 3.2041 8.85305 3.38668 9.1343 3.33066Z"
+                  fill="black" />
+                <path
+                  d="M9.1343 3.33066C9.48463 3.26088 9.9284 3.37854 10.2748 3.72496C10.6213 4.07137 10.7389 4.51514 10.6692 4.8655C10.6132 5.14673 10.7957 5.42013 11.077 5.47615C11.3582 5.53216 11.6316 5.34958 11.6876 5.06835C11.8309 4.34915 11.5795 3.56102 11.0092 2.99065C10.4388 2.42029 9.65068 2.16896 8.93143 2.31221C8.65025 2.36822 8.46763 2.64162 8.52365 2.92286C8.57968 3.2041 8.85305 3.38668 9.1343 3.33066Z"
+                  fill="black" fill-opacity="0.2" />
+                <path
+                  d="M9.1343 3.33066C9.48463 3.26088 9.9284 3.37854 10.2748 3.72496C10.6213 4.07137 10.7389 4.51514 10.6692 4.8655C10.6132 5.14673 10.7957 5.42013 11.077 5.47615C11.3582 5.53216 11.6316 5.34958 11.6876 5.06835C11.8309 4.34915 11.5795 3.56102 11.0092 2.99065C10.4388 2.42029 9.65068 2.16896 8.93143 2.31221C8.65025 2.36822 8.46763 2.64162 8.52365 2.92286C8.57968 3.2041 8.85305 3.38668 9.1343 3.33066Z"
+                  fill="black" fill-opacity="0.2" />
+              </svg>
+
+            </span>
+          </div>
+
+          <div class="size-[4px] bg-[#41FEA1]">
+
+          </div>
+
+          <div class="flex items-center gap-3">
+            <p>support@moatmt.sa</p>
+            <span>
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.84722 14.4008H14.0472C14.811 14.4008 15.5436 14.0974 16.0837 13.5573C16.6238 13.0171 16.9272 12.2847 16.9272 11.5208V4.32085C16.9272 3.55703 16.6238 2.82444 16.0837 2.28434C15.5436 1.74424 14.811 1.44085 14.0472 1.44085H5.40722C4.6434 1.44085 3.91085 1.74424 3.37075 2.28434C2.83064 2.82444 2.52722 3.55703 2.52722 4.32085V7.92084"
+                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M6.84722 14.4008H14.0472C14.811 14.4008 15.5436 14.0974 16.0837 13.5573C16.6238 13.0171 16.9272 12.2847 16.9272 11.5208V4.32085C16.9272 3.55703 16.6238 2.82444 16.0837 2.28434C15.5436 1.74424 14.811 1.44085 14.0472 1.44085H5.40722C4.6434 1.44085 3.91085 1.74424 3.37075 2.28434C2.83064 2.82444 2.52722 3.55703 2.52722 4.32085V7.92084"
+                  stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6.84722 14.4008H14.0472C14.811 14.4008 15.5436 14.0974 16.0837 13.5573C16.6238 13.0171 16.9272 12.2847 16.9272 11.5208V4.32085C16.9272 3.55703 16.6238 2.82444 16.0837 2.28434C15.5436 1.74424 14.811 1.44085 14.0472 1.44085H5.40722C4.6434 1.44085 3.91085 1.74424 3.37075 2.28434C2.83064 2.82444 2.52722 3.55703 2.52722 4.32085V7.92084"
+                  stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M1.08728 12.2408H8.2873" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M1.08728 12.2408H8.2873" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1.08728 12.2408H8.2873" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1.08728 10.0808H3.96728" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M1.08728 10.0808H3.96728" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1.08728 10.0808H3.96728" stroke="black" stroke-opacity="0.2" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.351 2.90234C12.3118 10.5631 7.12782 10.5559 3.08862 2.90234" stroke="black"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.351 2.90234C12.3118 10.5631 7.12782 10.5559 3.08862 2.90234" stroke="black"
+                  stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.351 2.90234C12.3118 10.5631 7.12782 10.5559 3.08862 2.90234" stroke="black"
+                  stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+
+            </span>
+          </div>
         </div>
-      </div>
-      <div class="carousel-slide active">
-        <div class="bg-base-200/80 flex h-full justify-center p-6">
-          <span class="self-center text-2xl sm:text-4xl">Second slide</span>
-        </div>
-      </div>
-      <div class="carousel-slide">
-        <div class="bg-base-200 flex h-full justify-center p-6">
-          <span class="self-center text-2xl sm:text-4xl">Third slide</span>
+
+        <div>
+
         </div>
       </div>
     </div>
-  </div>
-
-  <button type="button" class="carousel-prev start-5 max-sm:start-3 carousel-disabled:opacity-50 size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-    <span class="icon-[tabler--chevron-left] size-5"></span>
-    <span class="sr-only">Previous</span>
-  </button>
-  <button type="button" class="carousel-next end-5 max-sm:end-3 carousel-disabled:opacity-50 size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-    <span class="icon-[tabler--chevron-right] size-5"></span>
-    <span class="sr-only">Next</span>
-  </button>
-
-  <div class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3"></div>
-</div>
-<!-- End Slider -->
- <div id="image" data-carousel='{ "loadingClasses": "opacity-0" }' class="relative w-full">
-  <div class="carousel">
-    <div class="carousel-body h-full opacity-0">
-      <!-- Slide 1 -->
-      <div class="carousel-slide">
-        <div class="flex h-full justify-center">
-          <img src="https://cdn.flyonui.com/fy-assets/components/carousel/image-22.png" class="size-full object-cover" alt="game" />
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="carousel-slide">
-        <div class="flex h-full justify-center">
-          <img src="https://cdn.flyonui.com/fy-assets/components/carousel/image-15.png" class="size-full object-cover" alt="vrbox" />
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="carousel-slide">
-        <div class="flex h-full justify-center">
-          <img src="https://cdn.flyonui.com/fy-assets/components/carousel/image-16.png" class="size-full object-cover" alt="laptop" />
-        </div>
-      </div>
-      <!-- Slide 4 -->
-      <div class="carousel-slide">
-        <div class="flex h-full justify-center">
-          <img src="https://cdn.flyonui.com/fy-assets/components/carousel/image-8.png" class="size-full object-cover" alt="VRBox" />
-        </div>
-      </div>
-      <!-- Slide 5 -->
-      <div class="carousel-slide">
-        <div class="flex h-full justify-center">
-          <img src="https://cdn.flyonui.com/fy-assets/components/carousel/image-23.png" class="size-full object-cover" alt="iwatch" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Previous Slide -->
-  <button type="button" class="carousel-prev start-5 max-sm:start-3 carousel-disabled:opacity-50 size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-    <span class="icon-[tabler--chevron-left] size-5 cursor-pointer"></span>
-    <span class="sr-only">Previous</span>
-  </button>
-  <!-- Next Slide -->
-   <button type="button" class="carousel-next end-5 max-sm:end-3 carousel-disabled:opacity-50 size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm">
-    <span class="icon-[tabler--chevron-right] size-5"></span>
-    <span class="sr-only">Next</span>
-  </button>
-</div>
+  </section>
 
 
-      <script src="./node_modules/flyonui/flyonui.js"></script>
 
-  </body>
+
+  <script src="./node_modules/flyonui/flyonui.js"></script>
+
+</body>
+
 </html>

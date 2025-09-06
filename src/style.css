@@ -5,3 +5,11 @@
 
 @source "../node_modules/flyonui/dist/index.js";
 @plugin "@iconify/tailwind4";
+
+
+@plugin "flyonui/theme" {
+  themes: false;
+}
+@theme {
+  --font-sans: "Rubik";
+}
