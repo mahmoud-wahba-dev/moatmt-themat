@@ -6,10 +6,54 @@
 @source "../node_modules/flyonui/dist/index.js";
 @plugin "@iconify/tailwind4";
 
-
 @plugin "flyonui/theme" {
   themes: false;
 }
 @theme {
   --font-sans: "Rubik";
+
+  --color-primary: black;
+  --color-secondary: #0448f4;
+
+  /* --container-padding: 16rem; */
+}
+:root {
+  --color-primary: black;
+  --color-secondary: #0448f4;
+}
+
+
+/* Optional: override container settings */
+@layer base {
+  .container {
+    @apply mx-auto px-4;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .center_flex {
+    @apply flex items-center justify-center;
+  }
+}
+
+/*try it at mobile clamp(12px, 1vw + 0.5rem, 16px) */
+html {
+  font-size: clamp(12px, 1vw + 1rem, 16px);
+}
+
+/* Override FlyonUI theme variables */
+@layer base {
+  :root,
+  [data-theme=light] {
+    --color-primary: var(--color-primary); /* black */
+
+    --color-secondary: var(--color-secondary); /* #0448f4 */
+  }
+
+  [data-theme=dark] {
+    --color-primary: var(--color-primary); /* still black, or swap if you want */
+
+    --color-secondary: var(--color-secondary);
+  }
 }
