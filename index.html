@@ -16,8 +16,8 @@
 <body>
   <section class="py-8 border-b border-[#0000001A] mb-8">
     <div class="container">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-6">
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center gap-6 max-md:justify-between max-md:w-full">
           <div class="flex items-center gap-3">
             <a href="tel:+966536465255" class="font-semibold text-black text-xs">+966536465255</a>
             <span>
@@ -93,7 +93,7 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 max-md:justify-between max-md:w-full">
           <p class="font-bold text-black text-xs">
             تابعونــا على وســائل التواصــل الاجتمــاعي!
           </p>
@@ -186,7 +186,7 @@
     </div>
   </section>
   <!-- Sticky navbar -->
-  <nav class="navbar bg-base-100 md:h-15 absolute start-0 top-18 z-1 shadow-base-300/20">
+  <nav class="navbar bg-base-100 md:h-15  start-0 top-18 z-1 shadow-base-300/20">
     <div class="w-full md:flex md:items-center md:gap-2">
       <div class="flex items-center justify-between max-md:w-full">
         <div class="navbar-start items-center justify-between max-md:w-full">
@@ -334,20 +334,19 @@
         class="md:navbar-end collapse hidden grow basis-full overflow-hidden transition-[height] duration-300 max-md:w-full">
         <ul class="menu md:menu-horizontal gap-2 p-0 text-base max-md:mt-2">
           <li>
-            <a href="#" class="font-bold text-sm text-black">الثيمــات</a>
+            <a href="#themes_sec" class="font-bold text-sm text-black">الثيمــات</a>
           </li>
           <li>
-            <a href="#" class="font-bold text-sm text-black"> الأسئلــة</a>
+            <a href="#faq_sec" class="font-bold text-sm text-black"> الأسئلــة</a>
           </li>
           <li>
-            <a href="#" class="font-bold text-sm text-black"> التقييمــات</a>
+            <a href="#testimonial_sec" class="font-bold text-sm text-black"> التقييمــات</a>
           </li>
           <li>
-            <a href="#" class="font-bold text-sm text-black"> المزايــا</a>
+            <a href="#features_sec" class="font-bold text-sm text-black"> المزايــا</a>
           </li>
           <li>
-            <a href="#" class="font-bold text-sm text-black">
-              تــواصل معنــا</a>
+            <a href="#contact_sec" class="font-bold text-sm text-black"> تــواصل معنــا</a>
           </li>
         </ul>
       </div>
@@ -371,7 +370,7 @@
               </p>
               <div class="relative">
                 <div class="">
-                  <a href=""
+                  <a href="#themes_sec"
                     class="btn h-[58px] btn-secondary btn-lg font-bold rounded-10px font-extrabold text-14px ps-4 pe-2 py-2.5">
                     إستكشف ثيمــــــاتنا
                     <div class="size-10 bg-white center_flex">
@@ -414,12 +413,13 @@
       </div>
     </section>
 
-    <section class="sm:py-28 py-12">
+    <section class="sm:py-28 py-12 -scroll-mt-24" id="themes_sec">
       <div class="container">
-        <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center justify-between mb-10 flex-wrap">
           <div>
             <h2 class="font-bold text-black text-52px mb-5">
-              ابرز الثيمـــات المميـــزة !
+              أبرز الثيمات المميزة!
+
             </h2>
             <p class="font-medium text-22px text-dark_black">
               قوالب جاهزة بتصاميم احترافية، أداء عالي، وتجربة مستخدم متكاملة.
@@ -447,7 +447,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           <div>
             <div class="relative">
               <div class="rounded-30px h-[600px] overflow-hidden mb-8">
@@ -1103,13 +1103,13 @@
       </div>
     </section>
 
-    <section class="sm:py-24 py-12 bg-[#F8F8F8]">
+    <section class="sm:py-24 py-12 bg-[#F8F8F8] -scroll-mt-24" id="features_sec">
       <div class="container">
         <h4 class="text-center mb-5 font-bold text-52px">متجاوب بالكامل وقابل للتخصيص !</h4>
         <p class="text-center font-medium mb-24 text-dark_black text-22px">
           لا مزيد من مشاكل المتاجر - فقط حلول قوية في متناول يدك
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 md:px-44 px-0 mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 lg:px-44 px-0 mb-24">
           <div class="flex items-center">
             <div>
               <div class="size-16 bg-black center_flex rounded-full mb-11">
@@ -1124,7 +1124,7 @@
                 لا تهمــل متجرك ابــدا...
               </h6>
               <p class="text-dark_black font-medium text-18px mb-11">أطلق العنان للتألق - قم بالبناء</p>
-              <div class="flex justify-between items-center gap-6">
+              <div class="flex justify-between items-center gap-6 flex-wrap">
                 <div class="flex items-center justify-between gap-10">
 
                   <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1186,7 +1186,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="flex items-center">
             <div>
               <img src="./public/market.webp" alt="market.webp" class="w-full rounded-66px " />
             </div>
@@ -1194,7 +1194,7 @@
 
 
 
-          <div>
+          <div class="flex items-center">
             <div>
               <img src="./public/matger_2.webp" alt="market.webp" class="w-full rounded-66px " />
             </div>
@@ -1272,7 +1272,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="flex items-center">
             <div>
               <img src="./public/matger_2.webp" alt="market.webp" class="w-full rounded-66px " />
             </div>
@@ -1282,7 +1282,7 @@
 
 
 
-          <div>
+          <div class="flex items-center">
             <div>
               <img src="./public/matger_4.webp" alt="market.webp" class="w-full rounded-66px " />
             </div>
@@ -1329,10 +1329,11 @@
 
     <section class="sm:py-28 py-12 pb-12">
       <div class="container">
-        <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center justify-between mb-12 flex-wrap max-lg:gap-5">
           <div>
             <h2 class="font-bold text-black text-52px mb-5">
-              تصميم متجرك بسهولة باستخدام ثيماتنا !
+              تصميم متجرك بسهولة باستخدام ثيماتنا !
+
             </h2>
             <p class="font-medium text-22px text-dark_black">
               لا مزيد من مشاكل المتاجر - فقط حلول قوية في متناول يدك. </p>
@@ -1357,10 +1358,10 @@
         </div>
 
 
-        <div class="grid grid-cols-3 gap-7">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           <div>
 
-            <div class="h-[606px] mb-6 rounded-10px">
+            <div class="h-fit lg:h-[606px] mb-6 rounded-10px">
               <img src="./public/matger_theme_1.webp" alt="matger_theme_1.webp"
                 class="w-full h-full object-cover rounded-10px" />
             </div>
@@ -1386,7 +1387,7 @@
 
           <div>
 
-            <div class="h-[606px] mb-6 rounded-10px">
+            <div class="h-fit lg:h-[606px] mb-6 rounded-10px">
               <img src="./public/matger_theme_2.webp" alt="matger_theme_1.webp"
                 class="w-full h-full object-cover rounded-10px" />
             </div>
@@ -1413,7 +1414,7 @@
 
           <div>
 
-            <div class="h-[606px] mb-6 rounded-10px">
+            <div class="h-fit lg:h-[606px] mb-6 rounded-10px">
               <img src="./public/matger_theme_3.webp" alt="matger_theme_1.webp"
                 class="w-full h-full object-cover rounded-10px" />
             </div>
@@ -1443,12 +1444,13 @@
     </section>
 
 
-    <section class="sm:py-28 py-12 bg-[#F8F8F8]">
+    <section class="sm:py-28 py-12 bg-[#F8F8F8] -scroll-mt-24" id="testimonial_sec">
       <div class="container">
-        <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center justify-between mb-12 flex-wrap max-lg:gap-5">
           <div>
             <h2 class="font-bold text-black text-52px mb-5">
-              نساعد المبدعين على تصميم متاجرهم بسرعة !
+              نساعد المبدعين على تصميم متاجرهم بسرعة!
+
             </h2>
             <p class="font-medium text-22px text-dark_black">
               قوالب جاهزة بتصاميم احترافية، أداء عالي، وتجربة مستخدم متكاملة.
@@ -1475,7 +1477,7 @@
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           <div class="flex flex-col justify-between bg-white rounded-10px p-10 gap-11">
             <div class=" ">
               <div class="flex items-center justify-between mb-4 ">
@@ -1891,10 +1893,13 @@
 
         </div>
     </section>
-    <section class="sm:pb-28 pb-12 bg-[#F8F8F8]">
+    <section class="sm:pb-28 pb-12 bg-[#F8F8F8]" id="faq_sec">
       <div class="container">
         <h5 class="font-bold text-52px mb-5 text-center">
-          إجابات على الأسئلة الشائعة !
+
+
+          إجابات على الأسئلة الشائعة!
+
         </h5>
         <p class="font-medium text-22px text-dark_black mb-14 text-center">إذا كان لديك أي أسئلة أخرى أو تحتاج إلى مزيد
           من
@@ -1906,17 +1911,17 @@
               <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
                 aria-controls="payment-arrow-collapse" aria-expanded="true">
                 <span>
-                     كم يستغرق إعداد الثيم بعد الشراء؟
+                  كم يستغرق إعداد الثيم بعد الشراء؟
                 </span>
                 <span
                   class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-             
+
               </button>
               <div id="payment-arrow-collapse"
                 class="accordion-content w-full overflow-hidden transition-[height] duration-300"
                 aria-labelledby="payment-arrow" role="region">
                 <div class="px-5 pb-4">
-                  <p class="text-base-content/80 font-normal">
+                  <p class="font-medium text-22px mt-8 text-dark_black">
                     عادة لايأخذ وقت طويل لان معظم الخصائص تكون جاهزه
                   </p>
                 </div>
@@ -1935,7 +1940,7 @@
                 class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
                 aria-labelledby="delivery-arrow" role="region">
                 <div class="px-5 pb-4">
-                  <p class="text-base-content/80 font-normal">
+                  <p class="font-medium text-22px mt-8 text-dark_black">
                     نحن نقدم ثيمات مع امكانية المعاينة قبل الشراء ويوجد دعم فني مابعد البيع فلا نقدم استرجاع قيمة الثيم
                     بعد الشراء
                   </p>
@@ -1945,18 +1950,100 @@
             <div class="accordion-item" id="cancel-arrow">
               <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
                 aria-controls="cancel-arrow-collapse" aria-expanded="false">
-                          ما هي خطوات شراء الثيم؟
+                ما هي خطوات شراء الثيم؟
                 <span
                   class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-      
+
               </button>
               <div id="cancel-arrow-collapse"
                 class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
                 aria-labelledby="cancel-arrow" role="region">
                 <div class="px-5 pb-4">
-                  <p class="text-base-content/80 font-normal">
+                  <p class="font-medium text-22px mt-8 text-dark_black">
                     لديك خطوتين تضغط على زر شراء الثيم ويحولك الى لوحة تحكم متجرك وتقوم بشراء الثيم والدفع هنا انت حصلت
                     على الثيم
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item" id="faq4-arrow">
+              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
+                aria-controls="faq4-arrow-collapse" aria-expanded="false">
+                هل شراء الثيم يتم مرة واحدة أم باشتراك؟
+                <span
+                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+
+              </button>
+              <div id="cancel-arrow-collapse"
+                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="cancel-arrow" role="region">
+                <div class="px-5 pb-4">
+                  <p class="font-medium text-22px mt-8 text-dark_black">
+                    الثيم يُشترى مرة واحدة فقط، وتشمل عملية الشراء جميع التحديثات المستقبلية مجانًا مدى الحياة. لا توجد
+                    أي رسوم اشتراك أو تكاليف إضافية.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item" id="faq5-arrow">
+              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
+                aria-controls="faq5-arrow-collapse" aria-expanded="false">
+                هل أحتاج إلى باقة خاصة لشراء الثيم؟
+                <span
+                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+
+              </button>
+              <div id="cancel-arrow-collapse"
+                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="cancel-arrow" role="region">
+                <div class="px-5 pb-4">
+                  <p class="font-medium text-22px mt-8 text-dark_black">
+                    جميع ثيماتنا تدعم جميع الباقات على مختلف المنصات فقط اشتري وصمم بكل الخصائص
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item" id="faq6-arrow">
+              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
+                aria-controls="faq6-arrow-collapse" aria-expanded="false">
+                هل يمكن تخصيص الثيم ليُناسب علامتي التجارية؟
+                <span
+                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+
+              </button>
+              <div id="cancel-arrow-collapse"
+                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="cancel-arrow" role="region">
+                <div class="px-5 pb-4">
+                  <p class="font-medium text-22px mt-8 text-dark_black">
+                    نعم يمكنك تخصيصه كيفما تشاء سواء بالألوان والتصاميم وكل ما تحتاج
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item" id="faq7-arrow">
+              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
+                aria-controls="faq7-arrow-collapse" aria-expanded="false">
+                ما الفائدة التي سأحصل عليها من الثيم؟
+                <span
+                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+
+              </button>
+              <div id="cancel-arrow-collapse"
+                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="cancel-arrow" role="region">
+                <div class="px-5 pb-4">
+                  <p class="font-medium text-22px mt-8 text-dark_black">
+                    تميز علامتك التجارية عن الاخرين وتسهل تجربة عملائك وتحسن من سرعة وجمالية متجرك وتستخدم خصائص غير
+                    موجودة فالمنصة
                   </p>
                 </div>
               </div>
@@ -1966,7 +2053,473 @@
       </div>
     </section>
 
+    <section class="bg-white py-12 sm:py-28 -scroll-mt-24" id="contact_sec">
+      <div class="container">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:gap-40 gap-6">
+          <div class="flex  items-center">
+            <div>
+              <div class="bg-black size-16 center_flex rounded-full mb-11">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16 28.9163C23.3637 28.9163 29.3333 23.1333 29.3333 15.9997C29.3333 8.86599 23.3637 3.08301 16 3.08301C8.63616 3.08301 2.66663 8.86599 2.66663 15.9997C2.66663 18.066 3.16745 20.0188 4.05791 21.7508C4.29455 22.211 4.37331 22.7371 4.23612 23.2338L3.44197 26.1092C3.09723 27.3573 4.27597 28.4991 5.56443 28.1652L8.53248 27.3959C9.0452 27.263 9.58824 27.3393 10.0633 27.5685C11.8511 28.4312 13.867 28.9163 16 28.9163ZM10.6666 17.6143C10.1143 17.6143 9.66663 18.048 9.66663 18.583C9.66663 19.118 10.1143 19.5518 10.6666 19.5518H18C18.5522 19.5518 19 19.118 19 18.583C19 18.048 18.5522 17.6143 18 17.6143H10.6666ZM9.66663 14.0622C9.66663 13.5272 10.1143 13.0934 10.6666 13.0934H21.3333C21.8856 13.0934 22.3333 13.5272 22.3333 14.0622C22.3333 14.5972 21.8856 15.0309 21.3333 15.0309H10.6666C10.1143 15.0309 9.66663 14.5972 9.66663 14.0622Z"
+                    fill="white" />
+                </svg>
+
+              </div>
+
+              <h5 class="font-semibold text-52px mb-6">
+                نحن هنا دائمًا لمساعدتك
+
+                <p class="font-semibold text-52px mb-6">
+                  — تواصل معنا! <span class="text-secondary"> 24/7</span>
+                </p>
+              </h5>
+
+              <p class="font-medium text-18px text-dark_black mb-11">
+                نحن نسعد باتصالك وتسرنا مساعدتك، حتى وإن لم تكن عميل لدينا.. لا تتردد في التواصل معنا عبر الوسائل
+                التالية
+              </p>
+              <div class="flex items-center justify-between mb-11 flex-wrap">
+                <div>
+                  <div>
+                    <a href="tel:+966536465255" class="flex items-center gap-2 font-semibold text-24px mb-4">
+                      +966536465255
+                      <span>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.12914 3.67739C7.50535 3.55992 7.89568 3.5 8.28865 3.5C10.1775 3.5 11.5769 5.16326 11.5769 7.04423V11.2635C11.5769 13.1445 10.1775 14.8077 8.28865 14.8077C7.89567 14.8077 7.50535 14.7478 7.12914 14.6303L6.84154 14.5405C6.74336 14.5098 6.64674 14.4759 6.55181 14.4387C8.05012 17.4814 10.5186 19.9499 13.5613 21.4482C13.5241 21.3533 13.4902 21.2567 13.4595 21.1584L13.3696 20.8708C13.2522 20.4946 13.1923 20.1043 13.1923 19.7113C13.1923 17.8225 14.8555 16.423 16.7365 16.423H20.9558C22.8367 16.423 24.5 17.8225 24.5 19.7113C24.5 20.1043 24.44 20.4946 24.3225 20.8708L24.2328 21.1584C23.7097 22.8336 22.2134 24.0469 20.4237 24.3623C19.3816 24.5458 18.3107 24.546 17.2686 24.3623C17.2276 24.3551 17.1867 24.3474 17.146 24.3392C10.3167 23.0252 4.97471 17.6833 3.66079 10.8538C3.65263 10.8132 3.64495 10.7723 3.63772 10.7314C3.45409 9.68928 3.45409 8.61841 3.63772 7.57633C3.9531 5.78654 5.16632 4.29029 6.84156 3.76719L7.12914 3.67739Z"
+                            fill="black" />
+                          <path
+                            d="M7.12914 3.67739C7.50535 3.55992 7.89568 3.5 8.28865 3.5C10.1775 3.5 11.5769 5.16326 11.5769 7.04423V11.2635C11.5769 13.1445 10.1775 14.8077 8.28865 14.8077C7.89567 14.8077 7.50535 14.7478 7.12914 14.6303L6.84154 14.5405C6.74336 14.5098 6.64674 14.4759 6.55181 14.4387C8.05012 17.4814 10.5186 19.9499 13.5613 21.4482C13.5241 21.3533 13.4902 21.2567 13.4595 21.1584L13.3696 20.8708C13.2522 20.4946 13.1923 20.1043 13.1923 19.7113C13.1923 17.8225 14.8555 16.423 16.7365 16.423H20.9558C22.8367 16.423 24.5 17.8225 24.5 19.7113C24.5 20.1043 24.44 20.4946 24.3225 20.8708L24.2328 21.1584C23.7097 22.8336 22.2134 24.0469 20.4237 24.3623C19.3816 24.5458 18.3107 24.546 17.2686 24.3623C17.2276 24.3551 17.1867 24.3474 17.146 24.3392C10.3167 23.0252 4.97471 17.6833 3.66079 10.8538C3.65263 10.8132 3.64495 10.7723 3.63772 10.7314C3.45409 9.68928 3.45409 8.61841 3.63772 7.57633C3.9531 5.78654 5.16632 4.29029 6.84156 3.76719L7.12914 3.67739Z"
+                            fill="black" fill-opacity="0.2" />
+                          <path
+                            d="M7.12914 3.67739C7.50535 3.55992 7.89568 3.5 8.28865 3.5C10.1775 3.5 11.5769 5.16326 11.5769 7.04423V11.2635C11.5769 13.1445 10.1775 14.8077 8.28865 14.8077C7.89567 14.8077 7.50535 14.7478 7.12914 14.6303L6.84154 14.5405C6.74336 14.5098 6.64674 14.4759 6.55181 14.4387C8.05012 17.4814 10.5186 19.9499 13.5613 21.4482C13.5241 21.3533 13.4902 21.2567 13.4595 21.1584L13.3696 20.8708C13.2522 20.4946 13.1923 20.1043 13.1923 19.7113C13.1923 17.8225 14.8555 16.423 16.7365 16.423H20.9558C22.8367 16.423 24.5 17.8225 24.5 19.7113C24.5 20.1043 24.44 20.4946 24.3225 20.8708L24.2328 21.1584C23.7097 22.8336 22.2134 24.0469 20.4237 24.3623C19.3816 24.5458 18.3107 24.546 17.2686 24.3623C17.2276 24.3551 17.1867 24.3474 17.146 24.3392C10.3167 23.0252 4.97471 17.6833 3.66079 10.8538C3.65263 10.8132 3.64495 10.7723 3.63772 10.7314C3.45409 9.68928 3.45409 8.61841 3.63772 7.57633C3.9531 5.78654 5.16632 4.29029 6.84156 3.76719L7.12914 3.67739Z"
+                            fill="black" fill-opacity="0.2" />
+                          <path
+                            d="M15.2983 5.35605C17.3677 4.76642 19.6211 5.25961 21.1806 6.81911C22.7402 8.37862 23.2334 10.6321 22.6437 12.7015C22.5215 13.1306 22.7702 13.5774 23.1992 13.6997C23.6282 13.8218 24.075 13.5732 24.1973 13.1442C24.9348 10.5555 24.3286 7.68262 22.3229 5.67686C20.3172 3.67111 17.4444 3.06491 14.8556 3.8025C14.4265 3.92473 14.1779 4.3716 14.3002 4.8006C14.4223 5.2296 14.8693 5.47829 15.2983 5.35605Z"
+                            fill="black" />
+                          <path
+                            d="M15.2983 5.35605C17.3677 4.76642 19.6211 5.25961 21.1806 6.81911C22.7402 8.37862 23.2334 10.6321 22.6437 12.7015C22.5215 13.1306 22.7702 13.5774 23.1992 13.6997C23.6282 13.8218 24.075 13.5732 24.1973 13.1442C24.9348 10.5555 24.3286 7.68262 22.3229 5.67686C20.3172 3.67111 17.4444 3.06491 14.8556 3.8025C14.4265 3.92473 14.1779 4.3716 14.3002 4.8006C14.4223 5.2296 14.8693 5.47829 15.2983 5.35605Z"
+                            fill="black" fill-opacity="0.2" />
+                          <path
+                            d="M15.2983 5.35605C17.3677 4.76642 19.6211 5.25961 21.1806 6.81911C22.7402 8.37862 23.2334 10.6321 22.6437 12.7015C22.5215 13.1306 22.7702 13.5774 23.1992 13.6997C23.6282 13.8218 24.075 13.5732 24.1973 13.1442C24.9348 10.5555 24.3286 7.68262 22.3229 5.67686C20.3172 3.67111 17.4444 3.06491 14.8556 3.8025C14.4265 3.92473 14.1779 4.3716 14.3002 4.8006C14.4223 5.2296 14.8693 5.47829 15.2983 5.35605Z"
+                            fill="black" fill-opacity="0.2" />
+                          <path
+                            d="M17.3206 8.29214C17.8655 8.18359 18.5559 8.36662 19.0947 8.90549C19.6336 9.44436 19.8167 10.1347 19.7082 10.6797C19.621 11.1171 19.905 11.5424 20.3425 11.6296C20.78 11.7167 21.2052 11.4327 21.2924 10.9952C21.5152 9.87646 21.1243 8.65048 20.237 7.76324C19.3498 6.876 18.1238 6.48505 17.005 6.70788C16.5676 6.79501 16.2835 7.2203 16.3707 7.65779C16.4578 8.09526 16.8831 8.37928 17.3206 8.29214Z"
+                            fill="black" />
+                          <path
+                            d="M17.3206 8.29214C17.8655 8.18359 18.5559 8.36662 19.0947 8.90549C19.6336 9.44436 19.8167 10.1347 19.7082 10.6797C19.621 11.1171 19.905 11.5424 20.3425 11.6296C20.78 11.7167 21.2052 11.4327 21.2924 10.9952C21.5152 9.87646 21.1243 8.65048 20.237 7.76324C19.3498 6.876 18.1238 6.48505 17.005 6.70788C16.5676 6.79501 16.2835 7.2203 16.3707 7.65779C16.4578 8.09526 16.8831 8.37928 17.3206 8.29214Z"
+                            fill="black" fill-opacity="0.2" />
+                          <path
+                            d="M17.3206 8.29214C17.8655 8.18359 18.5559 8.36662 19.0947 8.90549C19.6336 9.44436 19.8167 10.1347 19.7082 10.6797C19.621 11.1171 19.905 11.5424 20.3425 11.6296C20.78 11.7167 21.2052 11.4327 21.2924 10.9952C21.5152 9.87646 21.1243 8.65048 20.237 7.76324C19.3498 6.876 18.1238 6.48505 17.005 6.70788C16.5676 6.79501 16.2835 7.2203 16.3707 7.65779C16.4578 8.09526 16.8831 8.37928 17.3206 8.29214Z"
+                            fill="black" fill-opacity="0.2" />
+                        </svg>
+
+                      </span>
+                    </a>
+                    <p class="font-medium text-14px text-grey mb-4">
+                      للتواصل عبر الواتساب
+                    </p>
+                  </div>
+                </div>
+                <div class="size-[6px] bg-[#D9D9D9] rounded-full">
+
+                </div>
+                <div>
+                  <div>
+                    <a href="mailto:support@moatmt.sa" class="flex items-center gap-2 font-semibold text-24px mb-4">
+                      support@moatmt.sa
+                      <span>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.6509 23.9569H21.8509C23.039 23.9569 24.1786 23.4848 25.0188 22.6447C25.8589 21.8044 26.3309 20.6651 26.3309 19.4769V8.27687C26.3309 7.08871 25.8589 5.94913 25.0188 5.10897C24.1786 4.26881 23.039 3.79688 21.8509 3.79688H8.41091C7.22273 3.79688 6.08322 4.26881 5.24307 5.10897C4.4029 5.94913 3.93091 7.08871 3.93091 8.27687V13.8769"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M10.6509 23.9569H21.8509C23.039 23.9569 24.1786 23.4848 25.0188 22.6447C25.8589 21.8044 26.3309 20.6651 26.3309 19.4769V8.27687C26.3309 7.08871 25.8589 5.94913 25.0188 5.10897C24.1786 4.26881 23.039 3.79688 21.8509 3.79688H8.41091C7.22273 3.79688 6.08322 4.26881 5.24307 5.10897C4.4029 5.94913 3.93091 7.08871 3.93091 8.27687V13.8769"
+                            stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path
+                            d="M10.6509 23.9569H21.8509C23.039 23.9569 24.1786 23.4848 25.0188 22.6447C25.8589 21.8044 26.3309 20.6651 26.3309 19.4769V8.27687C26.3309 7.08871 25.8589 5.94913 25.0188 5.10897C24.1786 4.26881 23.039 3.79688 21.8509 3.79688H8.41091C7.22273 3.79688 6.08322 4.26881 5.24307 5.10897C4.4029 5.94913 3.93091 7.08871 3.93091 8.27687V13.8769"
+                            stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M1.69092 20.5967H12.8909" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M1.69092 20.5967H12.8909" stroke="black" stroke-opacity="0.2" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1.69092 20.5967H12.8909" stroke="black" stroke-opacity="0.2" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1.69092 17.2373H6.17092" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                          <path d="M1.69092 17.2373H6.17092" stroke="black" stroke-opacity="0.2" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M1.69092 17.2373H6.17092" stroke="black" stroke-opacity="0.2" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M25.434 6.07031C19.1508 17.9871 11.0869 17.9759 4.80371 6.07031" stroke="black"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M25.434 6.07031C19.1508 17.9871 11.0869 17.9759 4.80371 6.07031" stroke="black"
+                            stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M25.434 6.07031C19.1508 17.9871 11.0869 17.9759 4.80371 6.07031" stroke="black"
+                            stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                      </span>
+                    </a>
+                    <p class="font-medium text-14px text-grey mb-4">
+                      للمراسلة المباشرة
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <a href=""
+                  class="btn h-[58px] btn-secondary btn-lg font-bold rounded-10px font-extrabold text-14px ps-4 pe-2 py-2.5">
+                  تواصل مع فريق ثيمات مؤتمت واتساب
+                  <div class="size-10 bg-white center_flex">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_859_672)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12 2C6.47715 2 2 6.47715 2 12C2 13.8896 2.52505 15.6594 3.43756 17.1683L2.54581 20.2002C2.32023 20.9672 3.03284 21.6798 3.79975 21.4542L6.83171 20.5624C8.34058 21.475 10.1104 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM9.73821 14.2627C11.7607 16.2852 13.692 16.5518 14.3739 16.5769C15.4111 16.6151 16.421 15.823 16.8147 14.9042C16.9112 14.6792 16.8871 14.4085 16.7255 14.2014C16.1782 13.5005 15.4373 12.9983 14.7134 12.4984C14.4006 12.282 13.9705 12.349 13.7401 12.6555L13.1394 13.5706C13.0727 13.6721 12.9402 13.707 12.8348 13.6467C12.4283 13.4143 11.8356 13.018 11.4092 12.5916C10.9833 12.1657 10.6111 11.5998 10.4022 11.2195C10.3473 11.1195 10.3777 10.996 10.4692 10.928L11.3927 10.2422C11.6681 10.0038 11.7165 9.59887 11.5138 9.30228C11.065 8.64569 10.5422 7.8112 9.7855 7.25926C9.57883 7.1085 9.3174 7.09158 9.10155 7.18408C8.1817 7.5783 7.38574 8.58789 7.42398 9.62695C7.44908 10.3089 7.71572 12.2402 9.73821 14.2627Z"
+                          fill="#0448F4" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_859_672">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <img src="./public/contact_img_1.webp" alt="contact_img.webp" class="w-full h-full object-cover">
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
   </main>
+
+
+  <footer class="">
+    <div class="container">
+      <div class="grid  grid-cols-12">
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+          <div class="md:max-w-[70%]">
+            <div class="mb-7">
+              <svg width="249" height="58" viewBox="0 0 249 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M26.5872 33.5391H24.1983C23.8307 33.5391 23.5857 33.6651 23.402 33.9804L13.8464 49.8043L4.29076 33.9804C4.107 33.6651 3.86198 33.5391 3.49446 33.5391H1.0443C0.615524 33.5391 0.431763 33.7912 0.431763 34.2325V57.1804C0.431763 57.6217 0.615524 57.8739 1.0443 57.8739H3.00443C3.4332 57.8739 3.67822 57.6217 3.67822 57.1804V39.0869L12.315 53.1456C12.56 53.5239 12.7438 53.5869 13.1113 53.5869H14.5202C14.8264 53.5869 15.1327 53.5239 15.3165 53.1456L23.9533 39.1499V57.1804C23.9533 57.6217 24.1983 57.8739 24.627 57.8739H26.5872C27.0159 57.8739 27.261 57.6217 27.261 57.1804V34.2325C27.261 33.7912 27.0159 33.5391 26.5872 33.5391Z"
+                  fill="#0A381C" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M50.2315 46.0847V50.2456C50.2315 55.3521 48.9451 57.8739 43.3098 57.8739H37.7969C32.2228 57.8739 30.8752 55.3521 30.8752 50.2456V46.0847C30.8752 41.0413 32.2228 38.5195 37.7969 38.5195H43.3098C48.9451 38.5195 50.2315 41.0413 50.2315 46.0847ZM47.1075 45.8326C47.1075 42.3652 46.3725 41.6087 43.2485 41.6087H37.8582C34.7342 41.6087 33.9992 42.3652 33.9992 45.8326V50.4978C33.9992 54.0913 34.7342 54.8478 37.8582 54.8478H43.2485C46.3725 54.8478 47.1075 54.0913 47.1075 50.4978V45.8326Z"
+                  fill="#0A381C" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M71.1802 44.1934V57.1804C71.1802 57.6217 70.9352 57.8739 70.5064 57.8739H68.6688C68.24 57.8739 67.995 57.6217 67.995 57.1804V54.9108C67.1374 56.9282 65.8511 57.8739 62.1759 57.8739H59.6645C55.1929 57.8739 52.6815 56.2347 52.6815 52.5782C52.6815 48.7956 54.0904 47.2195 58.6844 46.7152L66.9537 45.7695C67.75 45.6434 67.995 45.2021 67.995 44.3826C67.995 42.176 67.3824 41.6087 64.5648 41.6087H54.8254C54.3966 41.6087 54.1516 41.3565 54.1516 40.9152V39.213C54.1516 38.7717 54.3966 38.5195 54.8254 38.5195H64.626C69.4651 38.5195 71.1802 40.2847 71.1802 44.1934ZM67.995 48.5434L59.1744 49.4891C56.4793 49.7413 55.8667 50.4347 55.8667 52.263C55.8667 53.9652 57.0305 54.9108 59.6645 54.9108H63.4622C66.9537 54.9108 67.995 53.65 67.995 50.4347V48.5434Z"
+                  fill="#0A381C" />
+                <path
+                  d="M86.4934 38.5195H78.8367V34.2325C78.8367 33.7912 78.5917 33.5391 78.1629 33.5391H77.3053C76.8561 33.5391 76.6315 33.7912 76.6315 34.2956C76.5703 38.2043 76.3253 38.4565 73.6301 38.5195C73.2013 38.5195 72.9563 38.7717 72.9563 39.213V40.8521C72.9563 41.2934 73.2013 41.5456 73.6301 41.5456H75.6515V50.5608C75.6515 55.4152 77.0603 57.8739 83.1244 57.8739H86.4934C86.9222 57.8739 87.1672 57.6217 87.1672 57.1804V55.6043C87.1672 55.163 86.9222 54.9108 86.4934 54.9108H83.1244C79.7555 54.9108 78.8367 53.9652 78.8367 50.876V41.5456H86.4934C86.9222 41.5456 87.1672 41.2934 87.1672 40.8521V39.213C87.1672 38.7717 86.9222 38.5195 86.4934 38.5195Z"
+                  fill="#0A381C" />
+                <path
+                  d="M111.853 38.5195H111.118C107.933 38.5195 106.156 39.4652 105.237 41.2934C104.319 39.3391 102.481 38.5195 99.2957 38.5195H98.5607C95.498 38.5195 93.9667 39.3391 93.2316 41.0413V39.213C93.2316 38.7717 92.9866 38.5195 92.5578 38.5195H90.7815C90.3527 38.5195 90.1077 38.7717 90.1077 39.213V57.1804C90.1077 57.6217 90.3527 57.8739 90.7815 57.8739H92.5578C92.9866 57.8739 93.2316 57.6217 93.2316 57.1804V45.8956C93.2316 42.2391 94.4567 41.6087 97.0906 41.6087H98.9895C102.052 41.6087 102.787 42.3652 102.787 45.8956V57.2434C102.787 57.6847 103.032 57.9369 103.461 57.9369H105.299C105.727 57.9369 105.911 57.6847 105.911 57.2434V45.8956C105.911 42.2391 107.136 41.6087 109.77 41.6087H111.669C114.793 41.6087 115.528 42.3652 115.528 45.8956V57.2434C115.528 57.6847 115.773 57.9369 116.202 57.9369H118.039C118.468 57.9369 118.652 57.6847 118.652 57.2434V46.1478C118.652 41.0413 117.304 38.5195 111.853 38.5195Z"
+                  fill="#0A381C" />
+                <path
+                  d="M134.027 38.5195H126.37V34.2325C126.37 33.7912 126.125 33.5391 125.696 33.5391H124.778C124.369 33.5391 124.165 33.7912 124.165 34.2956C124.104 38.2043 123.859 38.4565 121.102 38.5195C120.674 38.5195 120.429 38.7717 120.429 39.213V40.8521C120.429 41.2934 120.674 41.5456 121.102 41.5456H123.185V50.5608C123.185 55.4152 124.594 57.8739 130.597 57.8739H134.027C134.456 57.8739 134.701 57.6217 134.701 57.1804V55.6043C134.701 55.163 134.456 54.9108 134.027 54.9108H130.597C127.289 54.9108 126.37 53.9652 126.37 50.876V41.5456H134.027C134.456 41.5456 134.701 41.2934 134.701 40.8521V39.213C134.701 38.7717 134.456 38.5195 134.027 38.5195Z"
+                  fill="#0A381C" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M134.701 12.2919V17.0833C134.701 19.4789 132.74 21.4963 130.352 21.4963H120.245C119.877 21.4963 119.632 21.2441 119.632 20.8659V19.3528C118.836 20.6767 117.488 21.4963 115.957 21.4963H104.38C104.012 25.1528 102.297 27.0441 97.0295 27.0441H93.5993C93.1705 27.0441 92.9255 26.792 92.9255 26.3506V24.7115C92.9255 24.2702 93.1705 24.018 93.5993 24.018H97.0295C99.7246 24.018 100.888 23.3876 101.195 21.4963H93.293V21.5593C90.9041 21.5593 88.944 19.5419 88.944 17.0833V12.355C88.944 9.8963 90.9041 7.87891 93.293 7.87891H100.276C101.195 7.87891 102.052 8.19412 102.787 8.76152C103.767 9.45499 104.38 10.6528 104.441 11.9767C104.441 12.1028 104.441 12.2079 104.441 12.2919V18.2811H115.957C116.447 18.2811 116.937 17.9659 117.059 17.4615L119.265 10.8419C119.877 9.07673 121.531 7.87891 123.369 7.87891H130.352C132.74 7.87891 134.701 9.8963 134.701 12.2919ZM92.9867 18.2811H101.317V12.1028C101.256 11.7876 101.133 11.4724 100.95 11.3463C100.746 11.2202 100.521 11.1362 100.276 11.0941H93.293C92.6192 11.0941 92.0679 11.6615 92.0679 12.355V17.0833C92.0679 17.6506 92.4967 18.155 92.9867 18.2811ZM131.577 12.2919C131.577 11.6615 131.025 11.0941 130.352 11.0941H123.369C122.817 11.0941 122.389 11.4093 122.205 11.9137L120.122 18.2811C120.163 18.2811 120.204 18.2811 120.245 18.2811H130.352C131.025 18.2811 131.577 17.7137 131.577 17.0833V12.2919Z"
+                  fill="#0A381C" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M50.7214 21.4988H32.284C30.0788 21.4988 28.0574 20.4271 26.7711 18.7879C25.6073 20.301 23.8309 21.3097 21.8096 21.4988H7.4149C3.49465 21.4988 0.309448 18.2205 0.309448 14.1857V8.51184C0.309448 8.13358 0.615718 7.81836 0.921987 7.81836H2.82086C3.18838 7.81836 3.43339 8.13358 3.43339 8.51184V14.1857C3.43339 16.4553 5.20976 18.2836 7.4149 18.2836H21.2583C23.4634 18.2836 25.2398 16.4553 25.2398 14.1857V8.51184C25.2398 8.13358 25.4848 7.81836 25.8523 7.81836H27.6899C28.0574 7.81836 28.3637 8.13358 28.3637 8.51184V8.63792C28.3637 8.67995 28.3637 8.70097 28.3637 8.70097V14.1857C28.3637 16.4553 30.1401 18.2836 32.284 18.2836H36.7555H50.7214C51.2114 18.2836 51.7014 17.9684 51.824 17.464L54.0291 10.8444C54.6416 9.07923 56.2955 7.8814 58.1944 7.8814H65.116C67.5662 7.8814 69.4651 9.89879 69.4651 12.2944V17.0857C69.4651 17.506 69.4242 17.9053 69.3426 18.2836H78.3469C80.552 18.2836 82.2671 16.4553 82.2671 14.1857V8.51184C82.2671 8.13358 82.5734 7.81836 82.9409 7.81836H84.7785C85.146 7.81836 85.3911 8.13358 85.3911 8.51184V14.1857C85.3911 18.2205 82.2059 21.4988 78.3469 21.4988H55.0092C54.6416 21.4988 54.3966 21.2466 54.3966 20.8684V19.3553C53.6003 20.6162 52.2527 21.4988 50.7214 21.4988ZM54.8866 18.2836C54.9275 18.2836 54.9683 18.2836 55.0092 18.2836H62.6659H63.891H65.116C65.8511 18.2836 66.3411 17.7162 66.3411 17.0857V12.2944C66.3411 11.664 65.7898 11.0966 65.116 11.0966H58.1944C57.6431 11.0966 57.153 11.4118 56.9693 11.9162L54.8866 18.2836Z"
+                  fill="#0A381C" />
+                <path
+                  d="M93.4765 5.42174H94.5178H96.4779H99.9081C100.276 5.42174 100.459 5.23261 100.459 4.91739V4.03478C100.459 3.71957 100.276 3.53043 99.9081 3.53043H96.4779C96.6617 2.20652 97.3355 1.82826 99.0506 1.82826H100.031C100.276 1.82826 100.459 1.63913 100.459 1.38695V0.441302C100.459 0.126085 100.276 0 100.031 0H99.0506C95.7429 0 94.7628 1.19783 94.579 3.53043H93.4765C93.1089 3.53043 92.9252 3.69855 92.9252 4.03478V4.91739C92.9252 5.25362 93.1089 5.42174 93.4765 5.42174Z"
+                  fill="#0A381C" />
+                <path
+                  d="M80.9198 6.36758C82.2673 6.36758 83.0024 5.54801 83.0024 4.16106C83.0024 2.7741 82.2673 2.01758 80.9198 2.01758C79.5722 2.01758 78.7759 2.7741 78.7759 4.16106C78.7759 5.54801 79.5722 6.36758 80.9198 6.36758Z"
+                  fill="#0A381C" />
+                <path
+                  d="M86.4934 2.01758C85.1458 2.01758 84.4108 2.7741 84.4108 4.16106C84.4108 5.54801 85.1458 6.36758 86.4934 6.36758C87.841 6.36758 88.576 5.54801 88.576 4.16106C88.576 2.7741 87.841 2.01758 86.4934 2.01758Z"
+                  fill="#0A381C" />
+                <path
+                  d="M11.5186 10.0219C12.8662 10.0219 13.54 9.26535 13.54 7.8784C13.54 6.49144 12.8662 5.67188 11.5186 5.67188C10.1098 5.67188 9.37476 6.49144 9.37476 7.8784C9.37476 9.26535 10.1098 10.0219 11.5186 10.0219Z"
+                  fill="#0A381C" />
+                <path
+                  d="M17.0314 10.0219C18.3789 10.0219 19.1752 9.26535 19.1752 7.8784C19.1752 6.49144 18.3789 5.67188 17.0314 5.67188C15.6838 5.67188 14.9487 6.49144 14.9487 7.8784C14.9487 9.26535 15.6838 10.0219 17.0314 10.0219Z"
+                  fill="#0A381C" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M249 18.85V39.15C249 49.4261 240.67 58 230.318 58H219.966C212.677 58 194.484 58 187.134 58C185.48 58 184.5 56.9283 184.5 55.2261V47.7239C181.192 53.713 175.618 58 168.941 58H154.24C152.586 58 151.606 56.9913 151.606 55.2891V47.0304C151.606 45.6435 152.586 44.2565 154.24 44.2565C159.141 44.2565 164.041 44.2565 168.941 44.2565C170.963 44.2565 172.923 42.9326 173.597 40.8522L182.968 12.6717C185.602 5.16956 192.647 0 200.61 0H230.318C240.67 0 249 8.57391 249 18.85ZM235.647 18.85C235.647 16.1391 233.319 13.7435 230.318 13.7435H200.61C198.282 13.7435 196.261 15.0674 195.648 17.1478L186.521 44.5087C186.766 44.4457 186.889 44.2565 187.134 44.2565C200.405 44.2565 213.657 44.2565 226.887 44.2565H230.318C233.319 44.2565 235.647 41.8609 235.647 39.15V18.85Z"
+                  fill="#0A381C" />
+              </svg>
+
+            </div>
+            <p class="font-medium text-22px mb-7">
+              منصة موحدة لخدمة العملاء جمعت لك مختلف وسائل التواصل بمكان واحد من لوحة تحكُّم واحدة!
+            </p>
+            <div class="font-extrabold text-18px text-green mb-7 flex items-center gap-2">
+              <span>
+                تـــابعنا على
+              </span>
+              <span>
+                <svg width="21" height="2" viewBox="0 0 21 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 1H21" stroke="#0A381C" stroke-width="2" />
+                </svg>
+
+              </span>
+            </div>
+
+            <div class="flex gap-4 items-center gap-3 mb-11 flex-wrap">
+              <a class="size-12 bg-green  center_flex rounded-full" href="">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1346_4005)">
+                    <path
+                      d="M9.00033 0.666992C4.39799 0.666992 0.666992 4.39799 0.666992 9.00033C0.666992 12.9083 3.35766 16.1877 6.98733 17.0883V11.547H5.26899V9.00033H6.98733V7.90299C6.98733 5.06666 8.27099 3.75199 11.0557 3.75199C11.5837 3.75199 12.4947 3.85566 12.8673 3.95899V6.26733C12.6707 6.24666 12.329 6.23633 11.9047 6.23633C10.5383 6.23633 10.0103 6.75399 10.0103 8.09966V9.00033H12.7323L12.2647 11.547H10.0103V17.2727C14.1367 16.7743 17.334 13.261 17.334 9.00033C17.3337 4.39799 13.6027 0.666992 9.00033 0.666992Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1346_4005">
+                      <rect width="16.6667" height="16.6667" fill="white" transform="translate(0.666992 0.666992)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+
+              </a>
+
+              <a class="size-12 bg-green  center_flex rounded-full" href="">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1346_3994)">
+                    <path
+                      d="M9.00033 2.16764C11.2269 2.16764 11.4906 2.17741 12.3662 2.21647C13.18 2.25228 13.6195 2.389 13.9124 2.50293C14.2998 2.65267 14.5798 2.83496 14.8695 3.12467C15.1624 3.41764 15.3415 3.69434 15.4912 4.08171C15.6051 4.37467 15.7419 4.81738 15.7777 5.62793C15.8167 6.50684 15.8265 6.77051 15.8265 8.99382C15.8265 11.2204 15.8167 11.484 15.7777 12.3597C15.7419 13.1735 15.6051 13.613 15.4912 13.9059C15.3415 14.2933 15.1592 14.5732 14.8695 14.863C14.5765 15.1559 14.2998 15.335 13.9124 15.4847C13.6195 15.5986 13.1768 15.7354 12.3662 15.7712C11.4873 15.8102 11.2236 15.82 9.00033 15.82C6.77376 15.82 6.51009 15.8102 5.63444 15.7712C4.82064 15.7354 4.38119 15.5986 4.08822 15.4847C3.70085 15.335 3.4209 15.1527 3.13119 14.863C2.83822 14.57 2.65918 14.2933 2.50944 13.9059C2.39551 13.613 2.25879 13.1702 2.22298 12.3597C2.18392 11.4808 2.17415 11.2171 2.17415 8.99382C2.17415 6.76725 2.18392 6.50358 2.22298 5.62793C2.25879 4.81413 2.39551 4.37467 2.50944 4.08171C2.65918 3.69434 2.84147 3.41439 3.13119 3.12467C3.42415 2.83171 3.70085 2.65267 4.08822 2.50293C4.38119 2.389 4.82389 2.25228 5.63444 2.21647C6.51009 2.17741 6.77376 2.16764 9.00033 2.16764ZM9.00033 0.666992C6.73796 0.666992 6.45475 0.676758 5.56608 0.71582C4.68066 0.754883 4.07194 0.898112 3.5446 1.10319C2.99447 1.31803 2.52897 1.60124 2.06673 2.06673C1.60124 2.52897 1.31803 2.99447 1.10319 3.54134C0.898112 4.07194 0.754883 4.67741 0.71582 5.56283C0.676758 6.45475 0.666992 6.73796 0.666992 9.00033C0.666992 11.2627 0.676758 11.5459 0.71582 12.4346C0.754883 13.32 0.898112 13.9287 1.10319 14.4561C1.31803 15.0062 1.60124 15.4717 2.06673 15.9339C2.52897 16.3962 2.99447 16.6826 3.54134 16.8942C4.07194 17.0993 4.67741 17.2425 5.56283 17.2816C6.4515 17.3206 6.7347 17.3304 8.99707 17.3304C11.2594 17.3304 11.5426 17.3206 12.4313 17.2816C13.3167 17.2425 13.9255 17.0993 14.4528 16.8942C14.9997 16.6826 15.4652 16.3962 15.9274 15.9339C16.3896 15.4717 16.6761 15.0062 16.8877 14.4593C17.0928 13.9287 17.236 13.3232 17.2751 12.4378C17.3141 11.5492 17.3239 11.266 17.3239 9.00358C17.3239 6.74121 17.3141 6.45801 17.2751 5.56934C17.236 4.68392 17.0928 4.0752 16.8877 3.54785C16.6826 2.99447 16.3994 2.52897 15.9339 2.06673C15.4717 1.60449 15.0062 1.31803 14.4593 1.10645C13.9287 0.901367 13.3232 0.758138 12.4378 0.719076C11.5459 0.676758 11.2627 0.666992 9.00033 0.666992Z"
+                      fill="white" />
+                    <path
+                      d="M9.00033 4.71973C6.63704 4.71973 4.71973 6.63704 4.71973 9.00033C4.71973 11.3636 6.63704 13.2809 9.00033 13.2809C11.3636 13.2809 13.2809 11.3636 13.2809 9.00033C13.2809 6.63704 11.3636 4.71973 9.00033 4.71973ZM9.00033 11.777C7.46712 11.777 6.22363 10.5335 6.22363 9.00033C6.22363 7.46712 7.46712 6.22363 9.00033 6.22363C10.5335 6.22363 11.777 7.46712 11.777 9.00033C11.777 10.5335 10.5335 11.777 9.00033 11.777Z"
+                      fill="white" />
+                    <path
+                      d="M14.4495 4.55013C14.4495 5.10352 14.0003 5.54948 13.4502 5.54948C12.8968 5.54948 12.4508 5.10026 12.4508 4.55013C12.4508 3.99675 12.9 3.55078 13.4502 3.55078C14.0003 3.55078 14.4495 4 14.4495 4.55013Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1346_3994">
+                      <rect width="16.6667" height="16.6667" fill="white" transform="translate(0.666992 0.666992)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+
+
+              </a>
+              <a class="size-12 bg-green  center_flex rounded-full" href="">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1346_3987)">
+                    <path
+                      d="M12.5229 0.666992H9.71411V12.0196C9.71411 13.3723 8.63382 14.4834 7.28942 14.4834C5.94503 14.4834 4.86472 13.3723 4.86472 12.0196C4.86472 10.6912 5.92103 9.60417 7.21742 9.55588V6.70565C4.36057 6.75394 2.05591 9.09695 2.05591 12.0196C2.05591 14.9665 4.40859 17.3337 7.31344 17.3337C10.2183 17.3337 12.5709 14.9424 12.5709 12.0196V6.19838C13.6272 6.97134 14.9236 7.43028 16.292 7.45445V4.60419C14.1794 4.53173 12.5229 2.79259 12.5229 0.666992Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1346_3987">
+                      <rect width="16.6667" height="16.6667" fill="white" transform="translate(0.666992 0.666992)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+
+
+              </a>
+
+              <a class="size-12 bg-green  center_flex rounded-full" href="">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.3936 1.98926H15.7363L10.6182 7.83891L16.6392 15.799H11.9248L8.23231 10.9712L4.00725 15.799H1.66314L7.13745 9.5421L1.36145 1.98926H6.19555L9.53325 6.40199L13.3936 1.98926ZM12.5714 14.3967H13.8695L5.4902 3.31782H4.09719L12.5714 14.3967Z"
+                    fill="white" />
+                </svg>
+
+
+
+              </a>
+
+              <a class="size-12 bg-green  center_flex rounded-full" href="">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1346_3982)">
+                    <path
+                      d="M16.0999 0.666992H1.89746C1.21712 0.666992 0.666992 1.2041 0.666992 1.86816V16.1292C0.666992 16.7933 1.21712 17.3337 1.89746 17.3337H16.0999C16.7803 17.3337 17.3337 16.7933 17.3337 16.1325V1.86816C17.3337 1.2041 16.7803 0.666992 16.0999 0.666992ZM5.61165 14.8695H3.1377V6.91374H5.61165V14.8695ZM4.37467 5.82975C3.5804 5.82975 2.93913 5.18848 2.93913 4.39746C2.93913 3.60645 3.5804 2.96517 4.37467 2.96517C5.16569 2.96517 5.80697 3.60645 5.80697 4.39746C5.80697 5.18522 5.16569 5.82975 4.37467 5.82975ZM14.8695 14.8695H12.3988V11.0023C12.3988 10.0811 12.3825 8.8929 11.113 8.8929C9.82715 8.8929 9.63183 9.89876 9.63183 10.9372V14.8695H7.16439V6.91374H9.53418V8.00098H9.56673C9.89551 7.37598 10.7028 6.71517 11.904 6.71517C14.4072 6.71517 14.8695 8.3623 14.8695 10.5042V14.8695Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1346_3982">
+                      <rect width="16.6667" height="16.6667" fill="white" transform="translate(0.666992 0.666992)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+
+              </a>
+
+
+              <a class="size-12 bg-green  center_flex rounded-full" href="">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1346_3974)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.15384 0.5H8.15314C8.13933 0.5 8.12635 0.499997 8.114 0.500163C8.01548 0.501155 7.85352 0.502724 7.83896 0.502889C7.48377 0.502889 6.7731 0.552922 6.00974 0.888885C5.57328 1.08085 5.18069 1.34041 4.84292 1.66037C4.44021 2.04161 4.11214 2.51164 3.868 3.05764C3.51045 3.85707 3.59533 5.20361 3.66349 6.28572L3.66374 6.28741C3.67104 6.4033 3.67871 6.52432 3.68572 6.64223C3.63327 6.66625 3.54822 6.6916 3.42287 6.6916C3.22119 6.6916 2.98136 6.62731 2.71022 6.50063C2.63044 6.46359 2.53939 6.44485 2.43892 6.44485C2.27749 6.44485 2.10732 6.49223 1.95971 6.57877C1.77399 6.6875 1.65399 6.84119 1.6214 7.01157C1.59992 7.12427 1.60095 7.34703 1.84912 7.57294C1.98562 7.6973 2.18615 7.81198 2.44497 7.91398C2.51289 7.94065 2.59349 7.96612 2.67887 7.99311C2.97514 8.08701 3.42354 8.22886 3.54047 8.50327C3.59972 8.64239 3.57422 8.82546 3.46488 9.04673C3.46202 9.05277 3.45916 9.05868 3.45654 9.06488C3.42922 9.12851 3.17429 9.70427 2.65138 10.3115C2.35424 10.6568 2.02696 10.9454 1.67916 11.1695C1.25464 11.4431 0.795294 11.6219 0.314012 11.701C0.125015 11.7319 -0.00995613 11.8998 0.000576202 12.0906C0.0038102 12.1456 0.0167483 12.2004 0.0391809 12.2534L0.0397201 12.2544C0.11614 12.4326 0.293321 12.584 0.581377 12.7176C0.933371 12.8806 1.45981 13.0177 2.14593 13.125C2.18059 13.1908 2.21658 13.356 2.2415 13.4691C2.26758 13.5893 2.29478 13.7129 2.33355 13.8442C2.37539 13.9865 2.4839 14.1565 2.76267 14.1565C2.86832 14.1565 2.98982 14.1328 3.13051 14.1056C3.33654 14.0653 3.6183 14.0103 3.96996 14.0103C4.16493 14.0103 4.36699 14.0274 4.57037 14.0611C4.96242 14.1262 5.3004 14.3642 5.69145 14.6399C6.26383 15.0434 6.91172 15.5 7.90161 15.5C7.92861 15.5 7.95568 15.4991 7.98243 15.4973C8.01515 15.4988 8.0557 15.5 8.09849 15.5C9.08867 15.5 9.73639 15.0432 10.3081 14.6401L10.3091 14.6393C10.7002 14.3639 11.0378 14.1262 11.4297 14.0611C11.633 14.0274 11.835 14.0103 12.0301 14.0103C12.366 14.0103 12.632 14.053 12.8696 14.0992C13.0245 14.1296 13.145 14.1442 13.2374 14.1442L13.2465 14.1444H13.2558C13.4597 14.1444 13.6095 14.0328 13.6667 13.8375C13.7047 13.709 13.7318 13.5883 13.7586 13.466C13.7819 13.36 13.8191 13.1901 13.8538 13.1237C14.5403 13.0162 15.0666 12.8793 15.4186 12.7163C15.706 12.5834 15.883 12.4322 15.9598 12.2547C15.9829 12.2015 15.9964 12.1463 15.9994 12.0902C16.0102 11.8997 15.875 11.7315 15.6859 11.7005C13.547 11.349 12.5834 9.15762 12.5435 9.06451C12.5409 9.0584 12.538 9.05232 12.535 9.04641C12.4257 8.82505 12.4004 8.64218 12.4597 8.50281C12.5764 8.22865 13.0245 8.0868 13.321 7.99295C13.4068 7.96599 13.4877 7.94036 13.5551 7.91382C13.847 7.79888 14.0556 7.67419 14.1932 7.53258C14.3576 7.36377 14.3896 7.20203 14.3876 7.09619C14.3826 6.84011 14.1862 6.61255 13.8739 6.50113C13.7684 6.45763 13.6481 6.43468 13.5256 6.43468C13.4423 6.43468 13.3188 6.4461 13.2019 6.50051C12.9517 6.61727 12.7275 6.6811 12.5351 6.6902C12.4327 6.68503 12.3609 6.6629 12.3145 6.64177C12.3203 6.54189 12.3268 6.43927 12.3335 6.33228L12.3362 6.28647C12.4048 5.20366 12.4899 3.85608 12.1322 3.05607C11.887 2.50814 11.5578 2.03689 11.1535 1.65483C10.8144 1.33466 10.4205 1.07514 9.98244 0.883301C9.22015 0.549818 8.50953 0.5 8.15384 0.5Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1346_3974">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+
+
+              </a>
+            </div>
+
+            <div class="mb-16">
+              <img src="./public/teqnia_saudia.svg" alt="teqnia_saudia">
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-span-12  sm:col-span-4 lg:col-span-3">
+          <div class="">
+            <h6 class="font-bold text-25px text-green mb-11  after:content-[''] after:block after:w-[40px] after:border after:border-[4px] 
+     after:border-green after:rounded-[13px] after:mt-5"> عن مؤتمت</h6>
+            <div class="mb-6">
+              <a href="" class="font-semibold mb-10 text-base">
+                من نحن
+              </a>
+            </div>
+
+            <div class="mb-6">
+              <a href="" class="font-semibold mb-10 text-base">
+                ⁠الاسئلة الشائعة
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold mb-10 text-base">
+                ⁠الشروط والأحكام
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold mb-10 text-base">
+                المدونة
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold mb-10 text-base">
+                ⁠الأسعار
+              </a>
+            </div>
+
+            <div class="mb-6">
+              <a href="" class="font-semibold mb-10 text-base">
+                ⁠المزايا
+              </a>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-4 lg:col-span-3">
+          <div class="">
+            <h6 class="font-bold text-25px text-green mb-11 after:content-[''] after:block after:w-[40px] after:border after:border-[4px] 
+     after:border-green after:rounded-[13px] after:mt-5"> منتجات مؤتمت</h6>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                مؤتمت بوت
+              </a>
+            </div>
+
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                مؤتمت شات المؤسسي
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                ⁠ثيمات مؤتمت
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                ⁠مؤتمت ugc
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                ⁠شركاء مؤتمت
+              </a>
+            </div>
+
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                ⁠داعم
+              </a>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+
+        <div class="col-span-12 sm:col-span-4 lg:col-span-2">
+          <div class="">
+            <h6 class="font-bold text-25px text-green mb-11 after:content-[''] after:block after:w-[40px] after:border after:border-[4px] 
+     after:border-green after:rounded-[13px] after:mt-5"> الخدمات المساندة</h6>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                الخدمات المصغرة
+              </a>
+            </div>
+
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                أكاديمية مؤتمت
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                ⁠مركز المساعدة
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                مجتمع مؤتمت فالواتساب
+              </a>
+            </div>
+            <div class="mb-6">
+              <a href="" class="font-semibold  text-base">
+                ⁠التسويق بالعمولة
+              </a>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <hr class="border-2 border-green/50 my-0">
+
+      <p class="py-12 text-center font-bold text-14px ">
+        &copy; جميع الحقوق محفوظة مؤتمت 2025
+      </p>
+    </div>
+  </footer>
 
   <script src="./node_modules/flyonui/flyonui.js"></script>
 </body>
