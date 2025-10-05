@@ -137,3 +137,41 @@ html {
   font-weight: 700;
   font-size: 16px;
 }
+
+
+    /* Custom animations for mobile menu */
+    #sticky-navbar-collapse {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      overflow: hidden;
+    }
+    
+    .collapse-toggle .icon-[tabler--menu-2],
+    .collapse-toggle .icon-[tabler--x] {
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .collapse-toggle .icon-[tabler--x] {
+      transform: rotate(0deg);
+    }
+    
+    .collapse-toggle.active .icon-[tabler--x] {
+      transform: rotate(90deg);
+    }
+    
+    /* Smooth menu items animation */
+    #sticky-navbar-collapse .menu li {
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+    
+    #sticky-navbar-collapse.menu-open .menu li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    #sticky-navbar-collapse.menu-open .menu li:nth-child(1) { transition-delay: 0.1s; }
+    #sticky-navbar-collapse.menu-open .menu li:nth-child(2) { transition-delay: 0.2s; }
+    #sticky-navbar-collapse.menu-open .menu li:nth-child(3) { transition-delay: 0.3s; }
+    #sticky-navbar-collapse.menu-open .menu li:nth-child(4) { transition-delay: 0.4s; }
+    #sticky-navbar-collapse.menu-open .menu li:nth-child(5) { transition-delay: 0.5s; }
