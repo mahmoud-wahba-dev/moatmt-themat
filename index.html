@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Themat Moatmt</title>
   <!-- Gourmet : 'Rubik' -->
   <link
     href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -2522,6 +2522,45 @@
   </footer>
 
   <script src="./node_modules/flyonui/flyonui.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.collapse-toggle');
+    const collapseElement = document.querySelector('#sticky-navbar-collapse');
+    
+    if (toggleButton && collapseElement) {
+        toggleButton.addEventListener('click', function() {
+            // Toggle the 'hidden' class
+            collapseElement.classList.toggle('hidden');
+            
+            // Toggle the button icons
+            const menuIcon = toggleButton.querySelector('.icon-\\[tabler--menu-2\\]');
+            const closeIcon = toggleButton.querySelector('.icon-\\[tabler--x\\]');
+            
+            if (menuIcon && closeIcon) {
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            }
+        });
+        
+        // Close menu when clicking on a link (mobile)
+        const menuLinks = collapseElement.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 768) { // Only on mobile
+                    collapseElement.classList.add('hidden');
+                    const menuIcon = toggleButton.querySelector('.icon-\\[tabler--menu-2\\]');
+                    const closeIcon = toggleButton.querySelector('.icon-\\[tabler--x\\]');
+                    
+                    if (menuIcon && closeIcon) {
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    }
+});
+</script>
 </body>
 
 </html>
