@@ -12,6 +12,48 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./src/style.css" />
 
+  <!-- CSS-only accordion: hide native marker, animate content, rotate chevron (works on mobile without JS) -->
+  <style>
+    /* basic reset for details/summary inside your accordion */
+    .accordion details { border: none; }
+    .accordion summary,
+    .accordion .accordion-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      padding: 1rem 0;
+      list-style: none;
+      background: transparent;
+      border: none;
+    }
+    /* hide default triangle */
+    summary::-webkit-details-marker { display: none; }
+    summary::marker { font-size: 0; }
+
+    /* content collapse animation via max-height + opacity */
+    .accordion .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .28s ease, opacity .28s ease;
+      opacity: 0;
+    }
+    /* when open, reveal */
+    .accordion details[open] .accordion-content {
+      max-height: 1200px; /* large enough for content */
+      opacity: 1;
+    }
+
+    /* rotate chevron - escape square brackets in class name */
+    .icon-\[tabler--chevron-right\] {
+      transition: transform .28s ease;
+      transform: rotate(0deg);
+    }
+    .accordion details[open] .icon-\[tabler--chevron-right\] {
+      transform: rotate(90deg);
+    }
+  </style>
 </head>
 
 <body>
@@ -1907,194 +1949,111 @@
           المعلومات، فلا تتردد في التواصل معنا مباشرة.</p>
         <div>
 
-          <div class="accordion divide-neutral/20 divide-y">
-            <div class="accordion-item active" id="payment-arrow">
-              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
-                aria-controls="payment-arrow-collapse" aria-expanded="true">
-                <span>
-                  كم يستغرق إعداد الثيم بعد الشراء؟
-                </span>
-                <span
-                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-
-              </button>
-              <div id="payment-arrow-collapse"
-                class="accordion-content w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="payment-arrow" role="region">
-                <div class="px-5 pb-4">
-                  <p class="font-medium text-22px mt-8 text-dark_black">
-                    غالبا في ساعات، وكل شخص وجهده في التصميم يحتوي كل قالب على عرض توضيحي مباشر يمكنك استكشافه للحصول
-                    على فكرة عن تصميمه ووظائفه او استعن بمصمم يسهل عليك المهمة.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item" id="delivery-arrow">
-              <button class="accordion-toggle inline-flex items-center justify-between gap-x-4 text-start"
-                aria-controls="delivery-arrow-collapse" aria-expanded="false">
-                هل يمكنني استرجاع قيمة الثيم بعد الشراء؟
-
-
-                <span
-                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-              </button>
-              <div id="delivery-arrow-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="delivery-arrow" role="region">
-                <div class="px-5 pb-4">
-                  <p class="font-medium text-22px mt-8 text-dark_black">
-                    نظرًا للطبيعة الرقمية لمنتجاتنا، لا نوفر إمكانية استرداد الأموال. ننصحك بمراجعة تفاصيل النموذج
-                    بعناية قبل الشراء.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item" id="cancel-arrow">
-              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
-                aria-controls="cancel-arrow-collapse" aria-expanded="false">
-                ما هي خطوات شراء الثيم؟
-                <span
-                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-
-              </button>
-              <div id="cancel-arrow-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="cancel-arrow" role="region">
-                <div class="px-5 pb-4">
-                  <p class="font-medium text-22px mt-8 text-dark_black">
-                    الشراء يتم من خلال منصة متجرك فلو الثيم اللي تبي تشتريه على سلة ابحث عنه في متجر الثيمات في سلة
-                    وكذلك الموضوع ينطبق على ثيمات زد او بكل اختصار اضغط على الثيم من موقعنا وراح ينقلك عليه تشتريه
-                    مباشرة
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="accordion-item" id="faq4-arrow">
-              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
-                aria-controls="faq4-arrow-collapse" aria-expanded="false">
-                هل شراء الثيم يتم مرة واحدة أم باشتراك؟
-                <span
-                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-
-              </button>
-              <div id="cancel-arrow-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="cancel-arrow" role="region">
-                <div class="px-5 pb-4">
-                  <p class="font-medium text-22px mt-8 text-dark_black">
-                    الثيم يشترى لمرة واحدة.وستحصل على جميع التحديثات المستقبلية مجانا ايضا وليس هناك اي رسوم اشتراك او
-                    نحوه
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="accordion-item" id="faq5-arrow">
-              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
-                aria-controls="faq5-arrow-collapse" aria-expanded="false">
-                هل أحتاج إلى باقة خاصة لشراء الثيم؟
-                <span
-                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-
-              </button>
-              <div id="cancel-arrow-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="cancel-arrow" role="region">
-                <div class="px-5 pb-4">
-                  <p class="font-medium text-22px mt-8 text-dark_black">
-         جميع باقات المنصات تدعم ثيماتنا بلا استثناء
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="accordion-item" id="faq6-arrow">
-              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
-                aria-controls="faq6-arrow-collapse" aria-expanded="false">
-                هل يمكن تخصيص الثيم ليُناسب علامتي التجارية؟
-                <span
-                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-
-              </button>
-              <div id="cancel-arrow-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="cancel-arrow" role="region">
-                <div class="px-5 pb-4">
-                  <p class="font-medium text-22px mt-8 text-dark_black">
-         نعم، جميع ثيماتنا قابلة للتخصيص بالكامل. يمكنك بسهولة تغيير الألوان والخطوط والصور والتخطيطات لتتناسب مع علامتك التجارية.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="accordion-item" id="faq7-arrow">
-              <button class="accordion-toggle inline-flex items-center gap-x-4 text-start"
-                aria-controls="faq7-arrow-collapse" aria-expanded="false">
-                ما الفائدة التي سأحصل عليها من الثيم؟
-                <span
-                  class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-
-              </button>
-              <div id="cancel-arrow-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="cancel-arrow" role="region">
-                <div class="px-5 pb-4">
-                  <p class="font-medium text-22px mt-8 text-dark_black">
-                  يفيد متجرك من ناحية الخصائص التي يدعمها حيث يعطيك وصول اكثر من ثيمات المنصات العادية ويعطيك تحكم بالالوان والنصوص والصور بالاضافة الى خصائص غير موجودة في نفس المنصة نحن عبر ثيماتنا نوفرها لك لتعمل بكل سلاسة وتميز متجرك عن غيره 
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white py-12 sm:py-28 -scroll-mt-24" id="contact_sec">
-      <div class="container">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:gap-40 gap-6">
-          <div class="flex  items-center">
-            <div>
-              <div class="bg-black size-16 center_flex rounded-full mb-11">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M16 28.9163C23.3637 28.9163 29.3333 23.1333 29.3333 15.9997C29.3333 8.86599 23.3637 3.08301 16 3.08301C8.63616 3.08301 2.66663 8.86599 2.66663 15.9997C2.66663 18.066 3.16745 20.0188 4.05791 21.7508C4.29455 22.211 4.37331 22.7371 4.23612 23.2338L3.44197 26.1092C3.09723 27.3573 4.27597 28.4991 5.56443 28.1652L8.53248 27.3959C9.0452 27.263 9.58824 27.3393 10.0633 27.5685C11.8511 28.4312 13.867 28.9163 16 28.9163ZM10.6666 17.6143C10.1143 17.6143 9.66663 18.048 9.66663 18.583C9.66663 19.118 10.1143 19.5518 10.6666 19.5518H18C18.5522 19.5518 19 19.118 19 18.583C19 18.048 18.5522 17.6143 18 17.6143H10.6666ZM9.66663 14.0622C9.66663 13.5272 10.1143 13.0934 10.6666 13.0934H21.3333C21.8856 13.0934 22.3333 13.5272 22.3333 14.0622C22.3333 14.5972 21.8856 15.0309 21.3333 15.0309H10.6666C10.1143 15.0309 9.66663 14.5972 9.66663 14.0622Z"
-                    fill="white" />
-                </svg>
-
-              </div>
-
-              <h5 class="font-semibold text-52px mb-6">
-                نحن هنا دائمًا لمساعدتك
-
-                <p class="font-semibold text-52px mb-6">
-                  — تواصل معنا! <span class="text-secondary"> 24/7</span>
+        <!-- replace the previous .accordion markup with details/summary so it works without JS -->
+        <div class="accordion divide-neutral/20 divide-y">
+          <details class="accordion-item" open>
+            <summary class="accordion-toggle">
+              <span>كم يستغرق إعداد الثيم بعد الشراء؟</span>
+              <span class="icon-[tabler--chevron-right] size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+            </summary>
+            <div class="accordion-content w-full overflow-hidden transition-[height] duration-300" role="region">
+              <div class="px-5 pb-4">
+                <p class="font-medium text-22px mt-8 text-dark_black">
+                  غالبا في ساعات، وكل شخص وجهده في التصميم يحتوي كل قالب على عرض توضيحي مباشر يمكنك استكشافه للحصول
+                  على فكرة عن تصميمه ووظائفه او استعن بمصمم يسهل عليك المهمة.
                 </p>
-              </h5>
+              </div>
+            </div>
+          </details>
 
-              <p class="font-medium text-18px text-dark_black mb-11">
-                نحن نسعد باتصالك وتسرنا مساعدتك، حتى وإن لم تكن عميل لدينا.. لا تتردد في التواصل معنا عبر الوسائل
-                التالية
-              </p>
-              <div class="flex items-center justify-between mb-11 flex-wrap">
-                <div>
-                  <div>
-                    <a href="tel:+966536465255" class="flex items-center gap-2 font-semibold text-24px mb-4">
-                      +966536465255
-                      <span>
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M7.12914 3.67739C7.50535 3.55992 7.89568 3.5 8.28865 3.5C10.1775 3.5 11.5769 5.16326 11.5769 7.04423V11.2635C11.5769 13.1445 10.1775 14.8077 8.28865 14.8077C7.89567 14.8077 7.50535 14.7478 7.12914 14.6303L6.84154 14.5405C6.74336 14.5098 6.64674 14.4759 6.55181 14.4387C8.05012 17.4814 10.5186 19.9499 13.5613 21.4482C13.5241 21.3533 13.4902 21.2567 13.4595 21.1584L13.3696 20.8708C13.2522 20.4946 13.1923 20.1043 13.1923 19.7113C13.1923 17.8225 14.8555 16.423 16.7365 16.423H20.9558C22.8367 16.423 24.5 17.8225 24.5 19.7113C24.5 20.1043 24.44 20.4946 24.3225 20.8708L24.2328 21.1584C23.7097 22.8336 22.2134 24.0469 20.4237 24.3623C19.3816 24.5458 18.3107 24.546 17.2686 24.3623C17.2276 24.3551 17.1867 24.3474 17.146 24.3392C10.3167 23.0252 4.97471 17.6833 3.66079 10.8538C3.65263 10.8132 3.64495 10.7723 3.63772 10.7314C3.45409 9.68928 3.45409 8.61841 3.63772 7.57633C3.9531 5.78654 5.16632 4.29029 6.84156 3.76719L7.12914 3.67739Z"
-                            fill="black" />
-                          <path
-                            d="M7.12914 3.67739C7.50535 3.55992 7.89568 3.5 8.28865 3.5C10.1775 3.5 11.5769 5.16326 11.5769 7.04423V11.2635C11.5769 13.1445 10.1775 14.8077 8.28865 14.8077C7.89567 14.8077 7.50535 14.7478 7.12914 14.6303L6.84154 14.5405C6.74336 14.5098 6.64674 14.4759 6.55181 14.4387C8.05012 17.4814 10.5186 19.9499 13.5613 21.4482C13.5241 21.3533 13.4902 21.2567 13.4595 21.1584L13.3696 20.8708C13.2522 20.4946 13.1923 20.1043 13.1923 19.7113C13.1923 17.8225 14.8555 16.423 16.7365 16.423H20.9558C22.8367 16.423 24.5 17.8225 24.5 19.7113C24.5 20.1043 24.44 20.4946 24.3225 20.8708L24.2328 21.1584C23.7097 22.8336 22.2134 24.0469 20.4237 24.3623C19.3816 24.5458 18.3107 24.546 17.2686 24.3623C17.2276 24.3551 17.1867 24.3474 17.146 24.3392C10.3167 23.0252 4.97471 17.6833 3.66079 10.8538C3.65263 10.8132 3.64495 10.7723 3.63772 10.7314C3.45409 9.68928 3.45409 8.61841 3.63772 7.57633C3.9531 5.78654 5.16632 4.29029 6.84156 3.76719L7.12914 3.67739Z"
-                            fill="black" fill-opacity="0.2" />
-                          <path
+          <details class="accordion-item">
+            <summary class="accordion-toggle">
+              <span>هل يمكنني استرجاع قيمة الثيم بعد الشراء؟</span>
+              <span class="icon-[tabler--chevron-right] size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+            </summary>
+            <div class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region">
+              <div class="px-5 pb-4">
+                <p class="font-medium text-22px mt-8 text-dark_black">
+                  نظرًا للطبيعة الرقمية لمنتجاتنا، لا نوفر إمكانية استرداد الأموال. ننصحك بمراجعة تفاصيل النموذج
+                  بعناية قبل الشراء.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-toggle">
+              <span>ما هي خطوات شراء الثيم؟</span>
+              <span class="icon-[tabler--chevron-right] size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+            </summary>
+            <div class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region">
+              <div class="px-5 pb-4">
+                <p class="font-medium text-22px mt-8 text-dark_black">
+                  الشراء يتم من خلال منصة متجرك فلو الثيم اللي تبي تشتريه على سلة ابحث عنه في متجر الثيمات في سلة
+                  وكذلك الموضوع ينطبق على ثيمات زد او بكل اختصار اضغط على الثيم من موقعنا وراح ينقلك عليه تشتريه
+                  مباشرة
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-toggle">
+              <span>هل شراء الثيم يتم مرة واحدة أم باشتراك؟</span>
+              <span class="icon-[tabler--chevron-right] size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+            </summary>
+            <div class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region">
+              <div class="px-5 pb-4">
+                <p class="font-medium text-22px mt-8 text-dark_black">
+                  الثيم يشترى لمرة واحدة.وستحصل على جميع التحديثات المستقبلية مجانا ايضا وليس هناك اي رسوم اشتراك او
+                  نحوه
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-toggle">
+              <span>هل أحتاج إلى باقة خاصة لشراء الثيم؟</span>
+              <span class="icon-[tabler--chevron-right] size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+            </summary>
+            <div class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region">
+              <div class="px-5 pb-4">
+                <p class="font-medium text-22px mt-8 text-dark_black">
+                  جميع باقات المنصات تدعم ثيماتنا بلا استثناء
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-toggle">
+              <span>هل يمكن تخصيص الثيم ليُناسب علامتي التجارية؟</span>
+              <span class="icon-[tabler--chevron-right] size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+            </summary>
+            <div class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region">
+              <div class="px-5 pb-4">
+                <p class="font-medium text-22px mt-8 text-dark_black">
+                  نعم، جميع ثيماتنا قابلة للتخصيص بالكامل. يمكنك بسهولة تغيير الألوان والخطوط والصور والتخطيطات لتتناسب مع علامتك التجارية.
+                </p>
+              </div>
+            </div>
+          </details>
+
+          <details class="accordion-item">
+            <summary class="accordion-toggle">
+              <span>ما الفائدة التي سأحصل عليها من الثيم؟</span>
+              <span class="icon-[tabler--chevron-right] size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+            </summary>
+            <div class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region">
+              <div class="px-5 pb-4">
+                <p class="font-medium text-22px mt-8 text-dark_black">
+                  يفيد متجرك من ناحية الخصائص التي يدعمها حيث يعطيك وصول اكثر من ثيمات المنصات العادية ويعطيك تحكم بالالوان والنصوص والصور بالاضافة الى خصائص غير موجودة في نفس المنصة نحن عبر ثيماتنا نوفرها لك لتعمل بكل سلاسة وتميز متجرك عن غيره 
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
                             d="M7.12914 3.67739C7.50535 3.55992 7.89568 3.5 8.28865 3.5C10.1775 3.5 11.5769 5.16326 11.5769 7.04423V11.2635C11.5769 13.1445 10.1775 14.8077 8.28865 14.8077C7.89567 14.8077 7.50535 14.7478 7.12914 14.6303L6.84154 14.5405C6.74336 14.5098 6.64674 14.4759 6.55181 14.4387C8.05012 17.4814 10.5186 19.9499 13.5613 21.4482C13.5241 21.3533 13.4902 21.2567 13.4595 21.1584L13.3696 20.8708C13.2522 20.4946 13.1923 20.1043 13.1923 19.7113C13.1923 17.8225 14.8555 16.423 16.7365 16.423H20.9558C22.8367 16.423 24.5 17.8225 24.5 19.7113C24.5 20.1043 24.44 20.4946 24.3225 20.8708L24.2328 21.1584C23.7097 22.8336 22.2134 24.0469 20.4237 24.3623C19.3816 24.5458 18.3107 24.546 17.2686 24.3623C17.2276 24.3551 17.1867 24.3474 17.146 24.3392C10.3167 23.0252 4.97471 17.6833 3.66079 10.8538C3.65263 10.8132 3.64495 10.7723 3.63772 10.7314C3.45409 9.68928 3.45409 8.61841 3.63772 7.57633C3.9531 5.78654 5.16632 4.29029 6.84156 3.76719L7.12914 3.67739Z"
                             fill="black" fill-opacity="0.2" />
                           <path
